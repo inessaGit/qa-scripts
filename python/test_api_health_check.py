@@ -9,11 +9,8 @@ Run:
     pytest python/test_api_health_check.py -v --tb=short
 """
 
-import time
-from io import StringIO
-from unittest.mock import MagicMock, patch, call
+from unittest.mock import MagicMock, patch
 
-import pytest
 
 # Allow running from repo root or from python/ directory
 import importlib.util
