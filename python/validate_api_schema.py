@@ -18,7 +18,7 @@ from pathlib import Path
 
 import requests
 import jsonschema
-from jsonschema import validate, Draft7Validator, ValidationError, SchemaError
+from jsonschema import validate, Draft7Validator, SchemaError
 
 
 # ---------------------------------------------------------------------------
