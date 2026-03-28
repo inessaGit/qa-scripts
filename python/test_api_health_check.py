@@ -9,7 +9,6 @@ Run:
     pytest python/test_api_health_check.py -v --tb=short
 """
 
-import sys
 import time
 from io import StringIO
 from unittest.mock import MagicMock, patch, call
@@ -332,7 +331,6 @@ class TestMain:
         with patch("requests.request", return_value=_make_response(200)) as mock_req:
             main(["--endpoints", "https://example.com/api", "--timeout", "7"])
 
-        _, kwargs_or_args = mock_req.call_args[0], mock_req.call_args
         # timeout is a positional or keyword arg — check either way
         call_kwargs = mock_req.call_args[1]
         assert call_kwargs.get("timeout") == 7
