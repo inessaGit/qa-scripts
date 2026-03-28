@@ -1,0 +1,66 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# Virtual environments
+venv/
+.venv/
+env/
+.env/
+ENV/
+
+# Environment files (keep .env.example, ignore .env)
+.env
+!.env.example
+
+# pytest
+.pytest_cache/
+.cache/
+*.pytest_cache
+
+# Coverage
+.coverage
+coverage.xml
+htmlcov/
+.nyc_output/
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Type checker caches
+.mypy_cache/
+.pytype/
+.pyre/
+
+# IDE / editors
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Test reports and artifacts
+allure-results/
+allure-report/
+playwright-report/
+test-results/
+html-report/
+coverage/
+
+# Maven
+target/
+
+# Node
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
