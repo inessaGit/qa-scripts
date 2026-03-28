@@ -181,7 +181,7 @@ check_endpoint() {
     url="${BASE_URL%/}/${url#/}"
   fi
 
-  local curl_output http_status elapsed
+  local http_status elapsed
 
   # Measure response time and capture HTTP status code
   local start_ns
