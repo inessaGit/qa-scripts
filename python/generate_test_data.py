@@ -28,6 +28,7 @@ def _state(fake: Faker) -> str:
             return fn()
     return ""
 
+
 def generate_user(fake: Faker) -> dict:
     """Generate a single fake user record."""
     return {
