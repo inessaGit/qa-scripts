@@ -20,6 +20,14 @@ from pathlib import Path
 from faker import Faker
 
 
+def _state(fake: Faker) -> str:
+    """Return a state/county/region string that works across all Faker locales."""
+    for method in ("state", "county", "administrative_unit", "region", "province"):
+        fn = getattr(fake, method, None)
+        if fn:
+            return fn()
+    return ""
+
 def generate_user(fake: Faker) -> dict:
     """Generate a single fake user record."""
     return {
@@ -38,7 +46,7 @@ def generate_user(fake: Faker) -> dict:
         "address": {
             "street": fake.street_address(),
             "city": fake.city(),
-            "state": fake.state(),
+            "state": _state(fake),
             "postcode": fake.postcode(),
             "country": fake.country(),
         },
